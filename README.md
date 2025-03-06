@@ -13,7 +13,7 @@
 You need both PHP extension and PHP classes library.
 
 1. Install xhprof either from PECL or distro's package repositories: https://pecl.php.net/package/xhprof
-2. Copy `xhprof_lib/` from [github.com/longxinH/xhprof](git@github.com:longxinH/xhprof.git) to your project (e.g. to `src/xhprof/xhprof_lib/`)
+2. Copy `xhprof_lib/` from [github.com/longxinH/xhprof](https://github.com/longxinH/xhprof) to your project (e.g. to `src/xhprof/xhprof_lib/`)
 
 ## Configuring xhprof output directory
 
