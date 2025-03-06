@@ -1,0 +1,21 @@
+services:
+  xhprof-php:
+    container_name: xhprof-php
+    build: ./docker/
+    working_dir: /var/www
+    volumes:
+      - ./xhprof:/var/www/xhprof
+      - ./data:/var/www/data
+
+  xhprof-nginx:
+    image: nginx:1.27.4
+    container_name: xhprof-nginx
+    working_dir: /var/www
+    volumes:
+      - ./xhprof:/var/www/xhprof
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d/:/etc/nginx/conf.d/:ro
+    depends_on:
+      - xhprof-php
+    ports:
+      - "127.0.0.1:8080:8080"
